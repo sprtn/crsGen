@@ -1,12 +1,133 @@
 ﻿<Window x:Class="crsGen.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:crsGen"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		mc:Ignorable="d"
+		Title="MainWindow"
+		Height="229.266"
+		Width="449.705">
+	<Grid ClipToBounds="True">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="22*" />
+			<RowDefinition Height="68*" />
+			<RowDefinition Height="9*" />
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition Width="10*" />
+			<ColumnDefinition Width="93*" />
+			<ColumnDefinition Width="41*" />
+			<ColumnDefinition Width="279*" />
+			<ColumnDefinition Width="19*" />
+			<ColumnDefinition Width="Auto" />
+		</Grid.ColumnDefinitions>
+		<Frame Content=""
+			   Grid.ColumnSpan="5"
+			   Grid.RowSpan="3">
+			<Frame.Background>
+				<LinearGradientBrush EndPoint="0.5,1"
+									 StartPoint="0.5,0">
+					<GradientStop Color="#FF7C93DE"
+								  Offset="0.106" />
+					<GradientStop Color="#FFCB3030"
+								  Offset="1" />
+				</LinearGradientBrush>
+			</Frame.Background>
+		</Frame>
+		<Button x:Name="GenerateCurseBtn"
+				Content="Show Love"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				Width="75"
+				Margin="0,0.277,0,0"
+				Click="GenerateCurseBtn_Click"
+				Height="20"
+				Grid.Column="1"
+				Grid.Row="1" />
+		<Button x:Name="CopyBtn"
+				Content="Copy"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				Width="75"
+				Margin="0,25,0,0"
+				Height="20"
+				Grid.Column="1"
+				Grid.Row="1"
+				Click="CopyBtn_Click" />
+		<Menu HorizontalAlignment="Left"
+			  Height="26"
+			  VerticalAlignment="Top"
+			  Width="517"
+			  Grid.ColumnSpan="6"
+			  Margin="0,0,-75,0">
+			<MenuItem Header="MenuItem"
+					  Height="26"
+					  Width="71"
+					  ClipToBounds="True" />
+			<MenuItem Header="MenuItem"
+					  Height="26"
+					  Width="71"
+					  ClipToBounds="True" />
+			<MenuItem Header="MenuItem"
+					  Height="26"
+					  Width="71"
+					  ClipToBounds="True" />
+			<MenuItem Header="MenuItem"
+					  Height="26"
+					  Width="71"
+					  ClipToBounds="True" />
+			<MenuItem Header="MenuItem"
+					  Height="26"
+					  Width="71"
+					  ClipToBounds="True" />
+		</Menu>
+		<Button Content="Button"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				Width="75"
+				Margin="0,50,0,0"
+				Height="20"
+				Grid.Column="1"
+				Grid.Row="1" />
+		<Button Content="Button"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Top"
+				Width="75"
+				Margin="0,75,0,0"
+				Height="20"
+				Grid.Column="1"
+				Grid.Row="1" />
+		<TextBox Name="CurseBox"
+				 Background="Transparent"
+				 FontFamily="Futura, Century Gothic"
+				 Height="136"
+				 TextWrapping="Wrap"
+				 Text="TextBox"
+				 FontSize="20"
+				 VerticalAlignment="Bottom"
+				 Grid.Column="3"
+				 FontWeight="SemiBold"
+				 Grid.Row="1"
+				 HorizontalAlignment="Left"
+				 Width="277"
+				 BorderThickness="0"
+				 MouseDown="CurseBox_MouseDown"
+				 AutoWordSelection="True"
+				 IsReadOnly="True"
+				 Cursor="Arrow"
+				 AllowDrop="False"
+				 IsHitTestVisible="True" />
+		<Label x:Name="notificaitonLabel"
+			   Visibility="Hidden"
+			   Content="Label"
+			   HorizontalAlignment="Left"
+			   VerticalAlignment="Top"
+			   Height="25"
+			   Width="112"
+			   Grid.Column="3"
+			   Margin="167,111,0,0"
+			   Grid.Row="1"
+			   FontSize="8"
+			   IsVisibleChanged="notificationLabel_IsVisibleChanged" />
+	</Grid>
 </Window>
