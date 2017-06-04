@@ -30,7 +30,7 @@ namespace crsGen
 		{
 			if (CurseBox.Visibility != Visibility.Visible)
 				CurseBox.Visibility = Visibility.Visible;
-			CurseBox.Text = "Newly Generated Curse";
+			CurseBox.Text = new Curse();
 		}
 
 		private void CurseBox_MouseDown(object sender, MouseButtonEventArgs e)
@@ -41,16 +41,16 @@ namespace crsGen
 		private void CopyCursetoClipboard()
 		{
 			Clipboard.SetText(CurseBox.Text);
-			notificaitonLabel.Content = "Curse added to clipboard!";
-			notificaitonLabel.HorizontalAlignment = "";
-			notificationLabel.VerticalAlignment = "";
-			notificaitonLabel.Visibility = Visibility.Visible;
+			notificationLabel.Content = "Curse added to clipboard!";
+			//notificationLabel.HorizontalAlignment = HorizontalAlignment.Left;
+			//notificationLabel.VerticalAlignment = VerticalAlignment.Top;
+			notificationLabel.Visibility = Visibility.Visible;
 		}
 
 		private async void notificationLabel_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
 		{
 			await Task.Delay(3000);
-			notificaitonLabel.Visibility = Visibility.Hidden;
+			notificationLabel.Visibility = Visibility.Hidden;
 		}
 
 		private void CopyBtn_Click(object sender, RoutedEventArgs e)

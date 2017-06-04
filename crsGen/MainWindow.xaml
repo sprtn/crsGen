@@ -117,7 +117,7 @@
 				 Cursor="Arrow"
 				 AllowDrop="False"
 				 IsHitTestVisible="True" />
-		<Label x:Name="notificaitonLabel"
+		<Label x:Name="notificationLabel"
 			   Visibility="Hidden"
 			   Content="Label"
 			   HorizontalAlignment="Left"
