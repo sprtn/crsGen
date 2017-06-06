@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
+using System.ComponentModel;
 using System.Linq;
 
 namespace crsGen
 {
 	internal class Curse
 	{
+		[Description("Calling a new curse from the lib")]
 		public string CurCurse => NewCurse();
 		//private DataSet ds = new DataSet();
 
@@ -32,6 +32,7 @@ namespace crsGen
 			{
 				"six",
 			};
+			
 
 			//DataTable x = new DataTable();
 			//x.Columns.Add("Frst");
