@@ -1,31 +1,58 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Windows.Documents;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
 
 namespace crsGen
 {
 	internal class Curse
 	{
-		public string CurCurse => newCurse();
+		public string CurCurse => NewCurse();
+		private DataSet ds = new DataSet();
 
-		private List<string> _firstListOfStrings;
-		private List<string> _secondListOfStrings;
-		private List<string> _thirdListOfStrings;
+		private readonly List<string> _firstListOfStrings;
+		private readonly List<string> _secondListOfStrings;
+		private readonly List<string> _thirdListOfStrings;
 
 		public Curse()
 		{
-			_firstListOfStrings = new List<string>();
-			_secondListOfStrings = new List<string>();
-			_thirdListOfStrings = new List<string>();
+			_firstListOfStrings = new List<string>
+			{
+				"",
+				""
+			};
+			_secondListOfStrings = new List<string>
+			{
+				"",
+				""
+			};
+			_thirdListOfStrings = new List<string>
+			{
+				"",
+				""
+			};
+
+			//DataTable x = new DataTable();
+			//x.Columns.Add("Frst");
+			//x.Columns.Add("Scnd");
+			//x.Columns.Add("Thrd");
+			//foreach (var crs in _firstListOfStrings)
+			//{
+			//	x.Rows.Add(crs);
+			//}
 		}
 
-		private string newCurse()
+		public string NewCurse()
 		{
-			var r = new Random();
+			return $"{AddToCurse(new Random(), _firstListOfStrings)} " +
+			       $"{AddToCurse(new Random(), _secondListOfStrings)} " +
+			       $"{AddToCurse(new Random(), _thirdListOfStrings)}";
+		}
 
-			
-
-			return "";
+		private string AddToCurse(Random r, List<string> stringList)
+		{
+			return stringList.ElementAt(r.Next(stringList.Count));
 		}
 	}
 }
