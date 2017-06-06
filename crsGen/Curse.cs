@@ -9,7 +9,7 @@ namespace crsGen
 	internal class Curse
 	{
 		public string CurCurse => NewCurse();
-		private DataSet ds = new DataSet();
+		//private DataSet ds = new DataSet();
 
 		private readonly List<string> _firstListOfStrings;
 		private readonly List<string> _secondListOfStrings;
@@ -19,18 +19,18 @@ namespace crsGen
 		{
 			_firstListOfStrings = new List<string>
 			{
-				"",
-				""
+				"one",
+				"two",
+				"three"
 			};
 			_secondListOfStrings = new List<string>
 			{
-				"",
-				""
+				"four",
+				"five"
 			};
 			_thirdListOfStrings = new List<string>
 			{
-				"",
-				""
+				"six",
 			};
 
 			//DataTable x = new DataTable();

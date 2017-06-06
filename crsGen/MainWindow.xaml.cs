@@ -21,6 +21,8 @@ namespace crsGen
 	/// </summary>
 	public partial class MainWindow: Window
 	{
+		Curse crs = new Curse();
+
 		public MainWindow()
 		{
 			InitializeComponent();
@@ -30,7 +32,7 @@ namespace crsGen
 		{
 			if (CurseBox.Visibility != Visibility.Visible)
 				CurseBox.Visibility = Visibility.Visible;
-			CurseBox.Text = new Curse();
+			CurseBox.Text = crs.CurCurse;
 		}
 
 		private void CurseBox_MouseDown(object sender, MouseButtonEventArgs e)
