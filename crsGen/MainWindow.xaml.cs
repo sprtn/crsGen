@@ -59,5 +59,10 @@ namespace crsGen
 		{
 			CopyCursetoClipboard();
 		}
+
+		private void Label_MouseDown(object sender, MouseButtonEventArgs e)
+		{
+			CopyCursetoClipboard();
+		}
 	}
 }

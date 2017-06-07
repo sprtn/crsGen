@@ -129,5 +129,14 @@
 			   Grid.Row="1"
 			   FontSize="8"
 			   IsVisibleChanged="notificationLabel_IsVisibleChanged" />
+		<Label Content=""
+			   HorizontalAlignment="Left"
+			   VerticalAlignment="Top"
+			   RenderTransformOrigin="16.078,2.444"
+			   Width="277"
+			   Grid.Column="3"
+			   Grid.Row="1"
+			   Height="136"
+			   MouseDown="Label_MouseDown" />
 	</Grid>
 </Window>
