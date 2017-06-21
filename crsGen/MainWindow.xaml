@@ -59,7 +59,7 @@
 				 FontFamily="Futura, Century Gothic"
 				 Height="136"
 				 TextWrapping="Wrap"
-				 Text="TextBox"
+				 Text=""
 				 FontSize="20"
 				 VerticalAlignment="Bottom"
 				 Grid.Column="3"
