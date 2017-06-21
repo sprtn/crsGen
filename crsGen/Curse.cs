@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 
+// ----------------------------------------
+//		Made by Vegard Bratteng @ vebr.no
+// ----------------------------------------
+
 namespace crsGen
 {
 	public class Curse
@@ -24,7 +28,7 @@ namespace crsGen
 				{
 					"I'd fuck your",
 					"I slap your",
-					"Suck on this",
+					"Suck on",
 					//"Your mother is a",
 					"I fill every",
 					"I would easily ejaculate on your",
