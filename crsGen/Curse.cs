@@ -19,7 +19,7 @@ namespace crsGen
 		private static readonly Random R = new Random();
 		private static readonly object SyncLock = new object();
 
-		private readonly List<List<List<string>>> fullList = new List<List<List<string>>>
+		private readonly List<List<List<string>>> _fullList = new List<List<List<string>>>
 		{
 			// First list of insults
 			new List<List<string>>
@@ -29,7 +29,6 @@ namespace crsGen
 					"I'd fuck your",
 					"I slap your",
 					"Suck on",
-					//"Your mother is a",
 					"I fill every",
 					"I would easily ejaculate on your",
 					"Fuck this",
@@ -41,7 +40,6 @@ namespace crsGen
 					"asshole",
 					"tits",
 					"bitch",
-					//"wide fucking",
 					"avocado-patch",
 					"cunt"
 				},
@@ -63,70 +61,40 @@ namespace crsGen
 			{
 				new List<string>
 				{
-					//A, B, C, D, E
 					"Anal",
 					"Suck on this, you",
-
-					//F, G, H, I, J
 					"Fucking",
-
-					//K, L, M, N, O
 					"Motherfucking",
-
-					//P, Q, R, S, T
-
-					//U, V, W, X, Y, Z
 					"You"
 				},
 				new List<string>
 				{
-					//A, B, C, D, E
 					"turd loving",
-
-					//F, G, H, I, J
 					"goat-loving",
 					"god damn",
 					"interjaculate",
-
-					//K, L, M, N, O
 					"little",
-
-					//P, Q, R, S, T
 					"shit-covered"
-
-					//U, V, W, X, Y, Z
-
 				},
 				new List<string>
 				{
-					//A, B, C, D, E
 					"arsebadgering",
 					"blasted",
 					"cup-fucking",
 					"cum-sipping",
-
-					//F, G, H, I, J
 					"flower-sniffing",
 					"frazzlin",
 					"freakin'",
 					"jumping",
-
-					//K, L, M, N, O
 					"kremlin-inspecting",
 					"Legolas-lookalike",
 					"Mario-playing",
 					"Mustard",
-
-					//P, Q, R, S, T
 					"rimjob-giving",
 					"treehugging"
-
-					//U, V, W, X, Y, Z
-
 				},
 				new List<string>
 				{
-					//A, B, C, D, E
 					"asshole",
 					"ass-jabber",
 					"bitch",
@@ -139,25 +107,17 @@ namespace crsGen
 					"dick",
 					"dickweed",
 					"democrat",
-
-					//F, G, H, I, J
 					"fuck",
 					"fuck trumpet",
 					"hard-on",
-
-					//K, L, M, N, O
 					"knob",
 					"nupson",
 					"onanist",
-
-					//P, Q, R, S, T
 					"prick",
 					"shart",
 					"shit",
 					"shit-wad",
 					"twat",
-
-					//U, V, W, X, Y, Z
 					"vegetarian",
 					"whore",
 					"xanthippe",
@@ -187,7 +147,7 @@ namespace crsGen
 
 		public string NewCurse()
 		{
-			var inputList = fullList.ElementAt(R.Next(fullList.Count));
+			var inputList = _fullList.ElementAt(R.Next(_fullList.Count));
 
 			string s = "";
 			foreach (List<string> subList in inputList)
@@ -202,3 +162,9 @@ namespace crsGen
 		}
 	}
 }
+
+/*
+ * BUGLIST:
+ * 
+ * Copy button crashes the application on Win 7?
+ */

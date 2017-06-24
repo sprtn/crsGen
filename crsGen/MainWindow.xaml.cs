@@ -42,7 +42,8 @@ namespace crsGen
 
 		private void CopyCursetoClipboard()
 		{
-			Clipboard.SetText(CurseBox.Text);
+
+			Clipboard.SetText(CurseBox.Text, TextDataFormat.Text);
 			notificationLabel.Content = "Curse added to clipboard!";
 			//notificationLabel.HorizontalAlignment = HorizontalAlignment.Left;
 			//notificationLabel.VerticalAlignment = VerticalAlignment.Top;
