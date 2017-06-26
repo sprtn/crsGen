@@ -140,7 +140,8 @@ namespace crsGen
 					"For your family's sake, I hope you were adopted.",
 					"Eat my asshole?",
 					"Toss my salad.",
-					"Eva Braun would like you."
+					"Eva Braun would like you.",
+					"Hi Shena"
 				}
 			}
 		};

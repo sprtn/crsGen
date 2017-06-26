@@ -1,18 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace crsGen
 {
@@ -21,7 +10,7 @@ namespace crsGen
 	/// </summary>
 	public partial class MainWindow: Window
 	{
-		Curse crs = new Curse();
+		private readonly Curse _crs = new Curse();
 
 		public MainWindow()
 		{
@@ -32,7 +21,7 @@ namespace crsGen
 		{
 			if (CurseBox.Visibility != Visibility.Visible)
 				CurseBox.Visibility = Visibility.Visible;
-			CurseBox.Text = crs.CurCurse;
+			CurseBox.Text = _crs.CurCurse;
 		}
 
 		private void CurseBox_MouseDown(object sender, MouseButtonEventArgs e)
@@ -40,13 +29,11 @@ namespace crsGen
 			CopyCursetoClipboard();
 		}
 
+		[STAThread]
 		private void CopyCursetoClipboard()
 		{
-
 			Clipboard.SetText(CurseBox.Text, TextDataFormat.Text);
 			notificationLabel.Content = "Curse added to clipboard!";
-			//notificationLabel.HorizontalAlignment = HorizontalAlignment.Left;
-			//notificationLabel.VerticalAlignment = VerticalAlignment.Top;
 			notificationLabel.Visibility = Visibility.Visible;
 		}
 
